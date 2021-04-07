@@ -8,6 +8,18 @@ type Query {
   allLinks: [Link]
 }
 
+type User {
+  id: ID!
+  name: String!
+  email: String
+  password: String
+}
+
+input AuthData {
+  email: String!
+  password: String!
+}
+
 schema {
   query: Query
   mutation: Mutation
@@ -15,4 +27,6 @@ schema {
 
 type Mutation {
   createLink(url: String!, description: String!): Link
+  createUser(name: String!, authProvider: AuthData!): User
 }
+
