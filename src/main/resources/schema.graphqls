@@ -20,6 +20,11 @@ input AuthData {
   password: String!
 }
 
+type SigninPayload {
+  token: String
+  user: User
+}
+
 schema {
   query: Query
   mutation: Mutation
@@ -28,5 +33,6 @@ schema {
 type Mutation {
   createLink(url: String!, description: String!): Link
   createUser(name: String!, authProvider: AuthData!): User
+  signinUser(auth: AuthData): SigninPayload
 }
 
