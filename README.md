@@ -11,7 +11,7 @@ This code is completed until step 4 - Connectors (https://www.howtographql.com/g
 
 ## Prerequisite
 
-A local Mongo DB instance is required, with both database and namespace titled 'hackernews'
+A local Mongo DB instance is required, with a database named 'hackernews'. A collection called 'links' will be created if not available when the program runs.
 
 ### Run Mongo DB as a service on OSX
 
